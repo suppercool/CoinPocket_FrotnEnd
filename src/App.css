@@ -1,0 +1,977 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Proxima Nova Font";
+  src: url("./assets/font/Proxima\ Nova\ Font.otf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav,
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #f1fcff;
+}
+
+.common_width {
+  width: 1200px;
+  margin: 0rem auto;
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+  height: 100px;
+}
+
+header,
+header > nav {
+  display: flex;
+  align-items: center;
+}
+header > img {
+  width: 220px;
+}
+header > nav a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #787e8b;
+  display: flex;
+  align-items: center;
+}
+header > nav a img {
+  margin-left: 5px;
+}
+header > nav > * + * {
+  margin-left: 3rem;
+}
+header .buttons_wrapper {
+  display: flex;
+  align-items: center;
+}
+header .buttons_wrapper button {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  width: 203px;
+  left: 1377px;
+  top: 40px;
+  border-radius: 5px;
+  padding: 17px, 30px, 17px, 30px;
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+header .buttons_wrapper button p {
+  margin-left: 10px;
+
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  text-align: left;
+}
+
+header .buttons_wrapper .chinese {
+  width: 100px;
+  padding: 0px;
+  margin-left: 10px !important;
+}
+header .buttons_wrapper .chinese > p {
+  margin-left: 0px;
+}
+/* main_area */
+.main_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 700px;
+  grid-gap: 2rem;
+}
+.main_area h1 {
+  font-family: "Proxima Nova Font";
+  color: #1c2335;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.main_area h1 span {
+  color: #0077fb;
+}
+.main_area .presentation > p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #787e8b;
+  margin: 2rem 0rem;
+}
+.main_area .img_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.main_area .img_wrapper::after {
+  content: "";
+  height: 259px;
+  width: 85%;
+  position: absolute;
+  border-radius: 0px;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(
+    88.88deg,
+    rgba(106, 106, 238, 0.6) 4.86%,
+    rgba(29, 157, 200, 0.6) 95.37%
+  );
+  filter: blur(150px);
+  transform: translate(-50%, -50%);
+}
+.main_area .img_wrapper img {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+.main_area .stars_wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.main_area .stars_wrapper p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2335;
+}
+.main_area .stars_wrapper .rate {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.main_area .stars_wrapper span {
+  color: #1e57ee;
+}
+
+/* GridRow */
+.GridRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 6rem 0rem;
+}
+.GridArea > *:nth-child(2) {
+  padding-top: 0px;
+}
+.GridRow .img_wrapper img {
+  width: 100%;
+}
+.GridRow h1 {
+  font-family: "Proxima Nova Font";
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2335;
+}
+.GridRow p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #787e8b;
+  margin: 15px 0px;
+}
+.GridRow ul {
+  margin-bottom: 2rem;
+}
+.GridRow ul li {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2335;
+  position: relative;
+  padding-left: 1.8rem;
+}
+.GridRow ul li::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  background: url("./assets/img/dot_list.svg");
+  width: 20px;
+  height: 20px;
+}
+.GridRow ul > * + * {
+  margin-top: 10px;
+}
+.GridRow button {
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  height: 50px;
+  width: 181px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.GridRow button p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+}
+
+.GridRow .presentation_area {
+  width: 80%;
+}
+.GridRow .presentation_area.just_self {
+  justify-self: center;
+  padding-left: 5rem;
+}
+
+/* TokenManage */
+.TokenManage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.TokenManage .top_area {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TokenManage h1 {
+  font-family: "Proxima Nova Font";
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+}
+.TokenManage p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  margin: 20px 0rem;
+  margin-top: 10px;
+}
+.TokenManage button {
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  height: 50px;
+  width: 181px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.TokenManage button p {
+  margin: 0px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+}
+.TokenManage > img {
+  margin-top: 5rem;
+  width: 80%;
+}
+
+/* Features */
+.Features {
+  padding: 5rem 0rem;
+}
+.Features h1 {
+  text-align: center;
+  font-family: "Proxima Nova Font";
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+}
+.Features p {
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #787e8b;
+}
+.Features .cards_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+.Features .cards_wrapper h1 {
+  font-family: "Proxima Nova Font";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #1c2335;
+  margin-top: 2rem;
+}
+.Features .cards_wrapper > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+  height: 492px;
+}
+.Features .cards_wrapper p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  width: 100%;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.Features .cards_wrapper button {
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  height: 45px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+}
+
+.LogosBanner {
+  height: 579px;
+  background: url("./assets/img/logos_banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LogosBanner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.LogosBanner > div h1,
+.PartnerArea h1 {
+  font-family: "Proxima Nova Font";
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+  width: 40%;
+}
+.LogosBanner > div p,
+.PartnerArea p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 20px 0rem;
+  margin-bottom: 30px;
+}
+.LogosBanner > div .logo_download_wrapper {
+  display: flex;
+  align-items: center;
+}
+.LogosBanner > div .logo_download_wrapper > * + * {
+  margin-left: 10px;
+}
+
+/* PartnerArea */
+.PartnerArea {
+  padding: 10rem 0rem;
+  background-color: #fff;
+  padding-bottom: 20rem;
+  position: relative;
+}
+.PartnerArea h1 {
+  color: #1c2335;
+  width: 100%;
+}
+.PartnerArea p {
+  color: #787e8b;
+  width: 47%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.PartnerArea .common_width > img {
+  width: 100%;
+  margin-top: 3rem;
+}
+.social_wrapper {
+  justify-content: space-between;
+  height: 312px;
+  background: url("./assets/img/social_bg.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  padding: 0rem 4rem;
+  bottom: -10rem;
+}
+.social_wrapper,
+.social_wrapper nav {
+  display: flex;
+  align-items: center;
+}
+.social_wrapper h1 {
+  color: #fff;
+
+  font-family: "Proxima Nova Font";
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.social_wrapper nav > * + * {
+  margin-left: 1rem;
+}
+
+.Footer {
+  padding-top: 20rem;
+  background: #0b1225;
+}
+.Footer .top_area {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  grid-gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.Footer .top_area h1 {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.Footer .top_area .head {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.Footer .top_area li a,
+.Footer .top_area p,
+.Footer .top_area li {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a7acb9;
+}
+.Footer .top_area p {
+  margin: 2rem 0rem;
+}
+.Footer .top_area li + li {
+  margin-top: 1rem;
+}
+.Footer .top_area .logo_download_wrapper {
+  display: flex;
+  align-items: center;
+}
+.Footer .top_area .logo_download_wrapper img {
+  width: 150px;
+}
+.Footer .top_area .logo_download_wrapper > * + * {
+  margin-left: 10px;
+}
+.Footer .bottom_area {
+  padding: 2rem 0rem;
+  background-color: #0b1225;
+  border-top: 1px solid #181e2f;
+}
+.Footer .bottom_area > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Footer .bottom_area p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a7acb9;
+}
+.Footer .bottom_area ul {
+  display: flex;
+  align-items: center;
+}
+
+.Footer .bottom_area ul a {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a7acb9;
+}
+.Footer .bottom_area ul > * + * {
+  margin-left: 3rem;
+}
+
+.Footer .input_wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #1dd6ff;
+  height: 48px;
+  padding-right: 2px;
+  border-radius: 5px;
+}
+
+.Footer .input_wrapper input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #a7acb9;
+  padding: 0rem 1.3rem;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Footer .input_wrapper input::placeholder {
+  color: #a7acb9;
+}
+.Footer .input_wrapper button {
+  height: 42px;
+  width: 87px;
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal > * {
+  background-color: #fff;
+  width: 700px;
+  border-radius: 10px;
+
+  overflow: auto;
+  padding: 2rem;
+}
+.modal .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.modal .head .close_icon {
+  cursor: pointer;
+}
+.modal .head > h1 {
+  font-size: 25px;
+  color: #190156;
+}
+.modal .head i {
+  font-size: 20px;
+}
+.modal .body_area > h1 {
+  font-size: 22px;
+  margin-top: 2rem;
+}
+.modal .body_area {
+  overflow: auto;
+  height: 600px;
+}
+.modal .body_area::-webkit-scrollbar {
+  display: none;
+}
+.modal .body_area > span {
+  font-size: 13px;
+}
+.modal .body_area .content_area {
+  margin-top: 2rem;
+}
+.modal .body_area .content_area > div {
+  margin-left: 20px;
+}
+.modal .body_area .content_area > div > h1 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.modal .body_area .content_area > h1 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.modal .body_area .content_area > div > p {
+  font-size: 13px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.modal .body_area .content_area > p {
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1250px) {
+  .common_width {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .GridRow {
+    /* grid-template-columns: 1fr; */
+  }
+  .GridRow .presentation_area.just_self {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header > nav {
+    display: none;
+  }
+  .main_area {
+    height: 100%;
+    padding: 5rem 0rem;
+    grid-template-columns: 1fr;
+  }
+
+  .main_area > *:first-child {
+    order: 2;
+  }
+  .main_area > *:last-child {
+    order: 1;
+  }
+  .GridRow {
+    grid-template-columns: 1fr;
+  }
+  .GridRow .presentation_area.just_self {
+    width: 100%;
+    order: 2;
+  }
+  .TokenManage > img {
+    width: 100%;
+  }
+  .Features .cards_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social_wrapper h1 {
+    font-size: 40px;
+  }
+  .Footer .top_area {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .social_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .social_wrapper nav img {
+    width: 50px;
+  }
+  .Footer .bottom_area > * {
+    flex-direction: column;
+  }
+  .Footer .bottom_area > * > * + * {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .PartnerArea p {
+    width: 100%;
+  }
+  .LogosBanner > div h1,
+  .PartnerArea h1 {
+    width: 100%;
+  }
+  .Features .cards_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .GridRow h1,
+  .GridRow p {
+    text-align: center;
+  }
+  .GridRow .presentation_area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Features p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .buttons_wrapper .chinese {
+    width: 60px;
+    height: 35px;
+  }
+  header .buttons_wrapper button:first-child {
+    height: 35px;
+    width: 100px;
+  }
+  .GridRow h1,
+  .TokenManage h1 {
+    margin-top: 20px;
+  }
+  header > img {
+    width: 150px;
+  }
+  header .buttons_wrapper > button,
+  .GridRow button,
+  .Features .cards_wrapper button {
+    height: 40px;
+    width: 120px;
+  }
+  header .buttons_wrapper > button img {
+    display: none;
+  }
+  header .buttons_wrapper > button p,
+  .GridRow button p,
+  .Features .cards_wrapper button {
+    font-size: 12px;
+  }
+  header .buttons_wrapper > button p {
+    margin-left: 0px;
+  }
+  .main_area .img_wrapper {
+    display: none;
+  }
+  .main_area h1 {
+    font-size: 30px;
+    line-height: unset;
+  }
+  .GridRow h1,
+  .TokenManage h1,
+  .Features h1,
+  .LogosBanner > div h1,
+  .PartnerArea h1 {
+    font-size: 25px;
+    line-height: unset;
+  }
+  .Features .cards_wrapper h1 {
+    font-size: 20px;
+  }
+  .main_area .presentation > p,
+  .GridRow p,
+  .GridRow ul li,
+  .TokenManage p,
+  .Features p,
+  .LogosBanner > div p,
+  .PartnerArea p,
+  .Features .cards_wrapper p {
+    font-size: 14px;
+    line-height: unset;
+  }
+
+  .Features p {
+    margin-top: 1rem;
+  }
+  .Features .cards_wrapper p {
+    margin-top: 0px;
+  }
+  .GridRow ul li {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .GridRow ul li::after {
+    display: none;
+  }
+  .logo_download_wrapper img {
+    width: 100px;
+  }
+  .main_area .stars_wrapper img {
+    width: 14px;
+  }
+  .main_area {
+    padding-bottom: 0px;
+  }
+  .GridRow {
+    padding-top: 0px;
+  }
+  .Features .cards_wrapper > * > img {
+    width: 80px;
+  }
+  .social_wrapper img {
+    width: 150px;
+  }
+  .social_wrapper h1 {
+    text-align: center;
+    margin: 20px 0rem;
+    font-size: 20px !important;
+  }
+  .social_wrapper nav img {
+    width: 30px;
+  }
+  .Features .cards_wrapper > * {
+    height: unset;
+  }
+  .LogosBanner {
+    height: 379px;
+  }
+  .PartnerArea {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+  .social_wrapper {
+    height: 250px;
+  }
+  .Footer .top_area p,
+  .Footer .top_area li a,
+  .Footer .top_area p,
+  .Footer .top_area li,
+  .Footer .bottom_area p,
+  .Footer .bottom_area ul a {
+    font-size: 14px;
+  }
+  .Footer .top_area .head {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .Footer .bottom_area p {
+    text-align: center;
+  }
+  .Footer .first_col > img {
+    width: 150px;
+  }
+  .Footer .top_area .logo_download_wrapper img {
+    width: 80px;
+  }
+  .main_area .stars_wrapper p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 380px) {
+  header .buttons_wrapper .chinese {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  header > button {
+    width: 100px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .modal {
+    background-color: #fff;
+  }
+  .modal > * {
+    width: 100%;
+
+    border-radius: 0px;
+  }
+  .modal .head > h1 {
+    font-size: 20px;
+  }
+  .modal .head > h1 span {
+    display: block;
+  }
+  .modal .body_area {
+    height: 80vh;
+  }
+}
