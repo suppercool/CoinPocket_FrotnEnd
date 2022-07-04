@@ -15,7 +15,7 @@ export const Features = ({ active }) => {
   }, [active]);
 
   return (
-    <div className="Features common_width">
+    <div className="Features common_width" id="feature_link">
       <h1>{Languages[lang]["title"]}</h1>
       <p>{Languages[lang]["para"]}</p>
       <div className="cards_wrapper">

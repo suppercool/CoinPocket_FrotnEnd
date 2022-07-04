@@ -18,7 +18,7 @@ export const PartnerArea = ({ active }) => {
     }
   }, [active]);
   return (
-    <div className="PartnerArea">
+    <div className="PartnerArea" id="partner_link">
       <div className="common_width">
         <h1>{Languages[lang]["title"]}</h1>
         <p>{Languages[lang]["para"]}</p>

@@ -9,6 +9,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -444,6 +445,9 @@ header .buttons_wrapper .chinese > p {
 .LogosBanner > div .logo_download_wrapper > * + * {
   margin-left: 10px;
 }
+.logo_download_wrapper img {
+  width: 150px;
+}
 
 /* PartnerArea */
 .PartnerArea {
@@ -823,7 +827,8 @@ header .buttons_wrapper .chinese > p {
   }
   header .buttons_wrapper > button,
   .GridRow button,
-  .Features .cards_wrapper button {
+  .Features .cards_wrapper button,
+  .TokenManage button {
     height: 40px;
     width: 120px;
   }
@@ -832,7 +837,8 @@ header .buttons_wrapper .chinese > p {
   }
   header .buttons_wrapper > button p,
   .GridRow button p,
-  .Features .cards_wrapper button {
+  .Features .cards_wrapper button,
+  .TokenManage button p {
     font-size: 12px;
   }
   header .buttons_wrapper > button p {

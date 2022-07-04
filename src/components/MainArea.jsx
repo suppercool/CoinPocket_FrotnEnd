@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import apple_logo from "../assets/img/apple.svg";
 import play_store_logo from "../assets/img/google.svg";
+import andriod from "../assets/img/andriod.jpeg";
+
 import mbl_main from "../assets/img/mbl_main.png";
 import star from "../assets/img/star.svg";
 import starhalf from "../assets/img/star_half.svg";
@@ -28,6 +30,9 @@ export const MainArea = ({ active }) => {
           </a>{" "}
           <a href="#">
             <img src={play_store_logo} alt="" />
+          </a>{" "}
+          <a href="#">
+            <img src={andriod} alt="" />
           </a>
         </div>
 

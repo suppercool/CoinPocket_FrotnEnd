@@ -15,7 +15,7 @@ export const GridArea = ({ active }) => {
     }
   }, [active]);
   return (
-    <div className="common_width GridArea">
+    <div className="common_width GridArea" id="product_link">
       <GridRow>
         <div className="img_wrapper">
           <img src={img1} alt="" />

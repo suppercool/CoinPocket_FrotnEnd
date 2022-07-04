@@ -17,13 +17,13 @@ export const Header = ({ active, setActive }) => {
       <img src={logo} alt="" />
       <nav>
         <li>
-          <a href="#">{Languages[lang]["nav1"]}</a>
+          <a href="#product_link">{Languages[lang]["nav1"]}</a>
         </li>
         <li>
-          <a href="#">{Languages[lang]["nav2"]}</a>
+          <a href="#feature_link">{Languages[lang]["nav2"]}</a>
         </li>
         <li>
-          <a href="#">{Languages[lang]["nav3"]}</a>
+          <a href="#partner_link">{Languages[lang]["nav3"]}</a>
         </li>
         <li>
           <a href="#">

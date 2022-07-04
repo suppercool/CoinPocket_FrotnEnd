@@ -81,7 +81,6 @@ export const Footer = ({ setPopup, active }) => {
           <ul>
             <li>
               <a
-                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setPopup("privacy");
@@ -92,7 +91,6 @@ export const Footer = ({ setPopup, active }) => {
             </li>
             <li>
               <a
-                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setPopup("agreement");
@@ -102,7 +100,9 @@ export const Footer = ({ setPopup, active }) => {
               </a>
             </li>
             <li>
-              <a href="#"> {Languages[lang]["footerRightLast"][2]}</a>
+              <a href="https://help.coinpocket.la/#/?type=idea" target="_blank">
+                {Languages[lang]["footerRightLast"][2]}
+              </a>
             </li>
           </ul>
         </div>
