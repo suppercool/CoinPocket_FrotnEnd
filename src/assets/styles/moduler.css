@@ -1,0 +1,95 @@
+.ModulerSteps {
+  background-color: #fff;
+  padding: 7rem 0rem;
+}
+.ModulerSteps > div > h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  color: #1c2335;
+  text-align: center;
+}
+.ModulerSteps > div > p {
+  font-family: Roboto;
+  font-size: 18px;
+  width: 719px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #787e8b;
+}
+.ModulerSteps > div .grid_steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  margin-top: 5rem;
+  position: relative;
+}
+.ModulerSteps > div .grid_steps > img {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 1;
+  transform: translate(-50%, -40%);
+}
+.ModulerSteps > div .grid_steps > div {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.ModulerSteps > div .grid_steps p {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #1c2335;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .ModulerSteps > div .grid_steps {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .ModulerSteps > div > p {
+    width: 100%;
+  }
+  .ModulerSteps > div .grid_steps > img {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .ModulerSteps > div > h1 {
+    font-size: 30px;
+  }
+  .ModulerSteps > div > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .ModulerSteps > div .grid_steps > div img {
+    width: 120px;
+  }
+  .ModulerSteps > div .grid_steps p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ModulerSteps > div > h1 {
+    font-size: 20px;
+    line-height: unset;
+  }
+  .ModulerSteps > div > p {
+    line-height: 30px;
+  }
+  .ModulerSteps > div .grid_steps > div img {
+    width: 120px;
+  }
+  .ModulerSteps > div .grid_steps p {
+    font-size: 17px;
+  }
+}

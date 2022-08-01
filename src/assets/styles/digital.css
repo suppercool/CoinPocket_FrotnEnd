@@ -1,0 +1,207 @@
+.MainDigital .presentation {
+  width: 635px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MainDigital .presentation > p {
+  width: 100%;
+}
+.DigitalAssets .grid_container {
+  background-color: #fff;
+}
+.DigitalAssets .grid_container > * + * {
+  margin-top: 8rem;
+}
+.DigitalAssets .grid_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+.DigitalAssets .grid_wrapper h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.DigitalAssets .grid_wrapper p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #787e8b;
+  margin-top: 1rem;
+}
+
+.DigitalAssets .grid_wrapper p b {
+  color: #1c2335;
+}
+
+.DigitalBlockChainwrapper {
+  background-color: #fff;
+  padding-top: 10rem;
+}
+.DigitalBlockChain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.DigitalBlockChain > h2 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #354764;
+  text-transform: uppercase;
+}
+.DigitalBlockChain > h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 522px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.DigitalBlockChain > p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #787e8b;
+  width: 682px;
+
+  margin: 1.5rem auto;
+}
+.DigitalBlockChain > .buttons_wrapper {
+  display: flex;
+  align-items: center;
+}
+.DigitalBlockChain > .buttons_wrapper button {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  width: 203px;
+  left: 1377px;
+  top: 40px;
+  border-radius: 5px;
+  padding: 17px, 30px, 17px, 30px;
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+.DigitalBlockChain > .buttons_wrapper button p {
+  margin-left: 10px;
+
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  text-align: left;
+}
+.DigitalBlockChain > .buttons_wrapper button:last-child {
+  background: transparent;
+  border: 2px solid #1dd6ff;
+  width: 170px;
+  margin-left: 1rem;
+}
+.DigitalBlockChain > .buttons_wrapper button:last-child p {
+  background: -webkit-linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.DigitalBlockChain .currency_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 100%;
+  margin-top: 6rem;
+}
+.DigitalAssets .PartnerArea {
+  padding-bottom: 9rem;
+}
+@media screen and (max-width: 1050px) {
+  .DigitalAssets .grid_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .DigitalAssets .grid_wrapper:first-child > *:first-child {
+    order: 2;
+  }
+  .DigitalAssets .grid_wrapper:first-child > *:last-child {
+    order: 1;
+  }
+  .DigitalAssets .grid_wrapper > img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .DigitalBlockChain > p,
+  .DigitalBlockChain > h1 {
+    width: 100%;
+  }
+  .DigitalBlockChain .currency_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 700px) {
+  .DigitalBlockChain .currency_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .MainDigital .presentation {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .DigitalAssets .grid_wrapper h1,
+  .DigitalBlockChain > h1 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .DigitalAssets .grid_wrapper p,
+  .DigitalBlockChain > p {
+    font-size: 14px;
+  }
+  .DigitalBlockChain > h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .DigitalAssets .grid_wrapper h1,
+  .DigitalBlockChain > h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 40px;
+  }
+  .DigitalBlockChain > .buttons_wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .DigitalBlockChain > .buttons_wrapper button {
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 369px) {
+  .DigitalBlockChain .currency_wrapper img {
+    width: 150px;
+  }
+}

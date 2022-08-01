@@ -3,7 +3,12 @@ import logo from "../assets/img/logo.svg";
 import dropdown from "../assets/img/dropdown.svg";
 import download from "../assets/img/download_icon.svg";
 import { Languages } from "../helper/Lang/Header";
+import { useNavigate } from "react-router-dom";
+import { JoinCommunity } from "./JoinCommunity";
 export const Header = ({ active, setActive }) => {
+  const [popupState, setPopupState] = useState(false);
+  const [ScrollDone, setScrollDone] = useState(false);
+  let navigate = useNavigate();
   const [lang, setLang] = useState("eng");
   useEffect(() => {
     if (active == "Chinese") {
@@ -12,9 +17,24 @@ export const Header = ({ active, setActive }) => {
       setLang("chi");
     }
   }, [active]);
+  if (ScrollDone == false) {
+    window.scrollTo(0, 0);
+    setScrollDone(true);
+  }
+
   return (
     <header className="common_width">
-      <img src={logo} alt="" />
+      {popupState && <JoinCommunity setPopupState={setPopupState} />}
+
+      <img
+        src={logo}
+        alt=""
+        style={{ cursor: "pointer" }}
+        onClick={(e) => {
+          navigate("/");
+        }}
+      />
+
       <nav>
         <li>
           <a href="#product_link">{Languages[lang]["nav1"]}</a>
@@ -32,7 +52,11 @@ export const Header = ({ active, setActive }) => {
         </li>
       </nav>
       <div className="buttons_wrapper">
-        <button>
+        <button
+          onClick={(e) => {
+            navigate("/Download");
+          }}
+        >
           <img src={download} alt="" />
           <p> {Languages[lang]["nav5"]}</p>
         </button>

@@ -1,32 +1,28 @@
-import logo from "./logo.svg";
+import { Download } from "./pages/Download";
 import "./App.css";
-import { useState } from "react";
-import { Header } from "./components/Header";
-import { MainArea } from "./components/MainArea";
-import { GridArea } from "./components/GridArea";
-import { TokenManage } from "./components/TokenManage";
-import { Features } from "./components/Features";
-import { LogosBanner } from "./components/LogosBanner";
-import { PartnerArea } from "./components/PartnerArea";
-import { Footer } from "./components/Footer";
-import { PrivacyPolicy } from "./components/PrivacyPolicy";
-import { Agreement } from "./components/Agreement";
+import { Home } from "./pages/Home";
+import { NFT } from "./pages/NFT";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Moduler } from "./pages/Moduler";
+import { WebBrowser } from "./pages/WebBrowser";
+import { Focused } from "./pages/Focused";
+import { DigitalAssets } from "./pages/DigitalAssets";
+import { ManageToken } from "./pages/ManageToken";
 function App() {
-  const [popup, setPopup] = useState(false);
-  const [active, setActive] = useState("Chinese");
   return (
     <div className="App">
-      {popup == "privacy" && <PrivacyPolicy setPopup={setPopup} />}
-      {popup == "agreement" && <Agreement setPopup={setPopup} />}
-
-      <Header active={active} setActive={setActive} />
-      <MainArea active={active} />
-      <GridArea active={active} />
-      <TokenManage active={active} />
-      <Features active={active} />
-      <LogosBanner active={active} />
-      <PartnerArea active={active} />
-      <Footer setPopup={setPopup} active={active} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Download" element={<Download />} />
+          <Route path="/NFT" element={<NFT />} />
+          <Route path="/Moduler" element={<Moduler />} />
+          <Route path="/WebBrowser" element={<WebBrowser />} />
+          <Route path="/Focused" element={<Focused />} />
+          <Route path="/DigitalAssets" element={<DigitalAssets />} />
+          <Route path="/ManageToken" element={<ManageToken />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

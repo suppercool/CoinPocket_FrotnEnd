@@ -1,0 +1,215 @@
+.MainWebBrowser button {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  width: 203px;
+  left: 1377px;
+  top: 40px;
+  border-radius: 5px;
+  padding: 17px, 30px, 17px, 30px;
+  background: linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  border-radius: 5px;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+.MainWebBrowser button p {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  text-align: left;
+}
+.MainWebBrowser ul {
+  margin-bottom: 2rem;
+}
+.MainWebBrowser ul li {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2335;
+}
+.MainWebBrowser ul li img {
+  margin-right: 10px;
+}
+.wrapperBrowser {
+  background-color: #fff;
+  padding: 7rem 0rem;
+}
+.BrowserCases > h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  color: #1c2335;
+  text-align: center;
+}
+.BrowserCases > p {
+  font-family: Roboto;
+  font-size: 18px;
+  width: 719px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #787e8b;
+}
+.BrowserCases .cards_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5rem;
+  grid-gap: 2rem;
+}
+.BrowserCases .cards_wrapper .card {
+  border: 1px solid #e2f2ff;
+  background: #f2f9ff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.BrowserCases .cards_wrapper .card img {
+  width: 100%;
+}
+.BrowserCases .cards_wrapper .card h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 1rem;
+  color: #1c2335;
+  margin-bottom: 0.5rem;
+}
+.BrowserCases .cards_wrapper .card p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #787e8b;
+}
+
+.GridBrowser {
+  background-color: #fff;
+  padding: 6rem 0rem;
+}
+.GridBrowser > div {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  grid-gap: 4rem;
+}
+.GridBrowser > div img {
+  width: 100%;
+}
+.GridBrowser > div .presentation {
+  text-align: center;
+}
+.GridBrowser > div .presentation h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #1c2335;
+}
+.GridBrowser > div .presentation p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 2rem;
+  color: #1c2335;
+}
+.GridBrowser + div {
+  padding-bottom: 8rem;
+}
+@media screen and (max-width: 1000px) {
+  .BrowserCases .cards_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .BrowserCases > p {
+    width: 100%;
+  }
+  .BrowserCases .cards_wrapper,
+  .GridBrowser > div {
+    grid-template-columns: 1fr;
+  }
+  .GridBrowser > div > *:first-child {
+    order: 2;
+  }
+  .GridBrowser > div > *:nth-child(2) {
+    order: 1;
+  }
+  .GridBrowser > div > *:nth-child(3) {
+    order: 3;
+  }
+  .GridBrowser > div > *:last-child {
+    order: 4;
+  }
+}
+@media screen and (max-width: 650px) {
+  .BrowserCases > h1,
+  .GridBrowser > div .presentation h1 {
+    font-size: 30px;
+  }
+
+  .BrowserCases > p,
+  .GridBrowser > div .presentation p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .BrowserCases .cards_wrapper .card h1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+  .GridBrowser > div .presentation p {
+    margin-top: 1rem;
+  }
+  .GridBrowser + div {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .MainWebBrowser ul li {
+    font-size: 15px;
+  }
+  .MainWebBrowser button {
+    height: 35px;
+    width: 100px;
+  }
+  .MainWebBrowser button img {
+    display: none;
+  }
+  .MainWebBrowser button p {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  .MainWebBrowser ul li {
+    display: flex;
+    align-items: center;
+  }
+  .BrowserCases > h1,
+  .GridBrowser > div .presentation h1 {
+    font-size: 20px;
+  }
+  .BrowserCases > p {
+    margin-top: 0px;
+  }
+  .BrowserCases .cards_wrapper .card h1 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,95 @@
+.MainManageToken {
+  background: url("../img/manage_token_bg.png") !important;
+  background-size: 90% !important;
+  background-position: center bottom !important;
+  background-repeat: no-repeat !important;
+  height: 913px;
+}
+
+.ManageToken .grid_container {
+  padding-top: 15rem;
+}
+
+.spot_wrapper {
+  padding-top: 10rem;
+  background-color: #fff;
+}
+.spot_wrapper h1 {
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.spot_wrapper ul {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.spot_wrapper ul li {
+  min-height: 83px;
+  width: 100%;
+  border: 1px solid #e2f2ff;
+  background: linear-gradient(0deg, #e2f2ff, #e2f2ff),
+    linear-gradient(0deg, #f2f9ff, #f2f9ff);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 24px 24px 24px 24px;
+}
+.spot_wrapper ul li p {
+  margin-left: 1rem;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #354764;
+}
+
+@media screen and (max-width: 1130px) {
+  .MainManageToken {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .MainManageToken {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .MainManageToken {
+    background: transparent !important;
+    height: unset !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .spot_wrapper h1 {
+    font-size: 30px;
+    width: 100%;
+    line-height: 40px;
+  }
+  .spot_wrapper ul {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .spot_wrapper h1 {
+    font-size: 20px;
+  }
+  .spot_wrapper ul li p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .ManageToken .grid_container {
+    padding-top: 10rem;
+  }
+}

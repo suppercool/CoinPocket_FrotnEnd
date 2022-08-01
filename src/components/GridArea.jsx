@@ -5,7 +5,9 @@ import digi_logo from "../assets/img/digi_logo.svg";
 import web_browser from "../assets/img/web_browser.svg";
 import web_browser2 from "../assets/img/grid_2_crop.png";
 import { Languages } from "../helper/Lang/GridArea";
+import { useNavigate } from "react-router-dom";
 export const GridArea = ({ active }) => {
+  let navigate = useNavigate();
   const [lang, setLang] = useState("eng");
   useEffect(() => {
     if (active == "Chinese") {
@@ -28,7 +30,11 @@ export const GridArea = ({ active }) => {
             <li>{Languages[lang]["firstGrid"]["li1"]}</li>
             <li>{Languages[lang]["firstGrid"]["li2"]}</li>
           </ul>
-          <button>
+          <button
+            onClick={(e) => {
+              navigate("/DigitalAssets");
+            }}
+          >
             <p>{Languages[lang]["buttonContent"]}</p>
           </button>
         </div>
@@ -43,7 +49,11 @@ export const GridArea = ({ active }) => {
             <li>{Languages[lang]["secondGrid"]["li1"]}</li>
             <li>{Languages[lang]["secondGrid"]["li2"]}</li>
           </ul>
-          <button>
+          <button
+            onClick={(e) => {
+              navigate("/WebBrowser");
+            }}
+          >
             <p>{Languages[lang]["buttonContent"]}</p>
           </button>
         </div>

@@ -1,0 +1,249 @@
+.nftMain {
+  background: linear-gradient(to bottom, #f1fcff 0%, transparent) !important;
+  background-color: #fff !important ;
+}
+.nftMain > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 6rem 0rem;
+}
+.nftMain > div > img {
+  width: 100%;
+}
+.nftMain h1 {
+  color: #1c2335;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 84px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.nftMain h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background: -webkit-linear-gradient(53.93deg, #1e5cef -4.44%, #1dd6ff 99.11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+.nftMain p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #78738b;
+  letter-spacing: 0em;
+
+  margin: 1rem 0rem;
+}
+
+.SupportedNFT {
+  padding-top: 10rem;
+  background-color: #fff;
+}
+.SupportedNFT > div > h1,
+.SupportedNFT .get_nft h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.SupportedNFT > div > p {
+  font-family: Roboto;
+  font-size: 18px;
+  width: 719px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.SupportedNFT > div .currency {
+  margin-top: 5rem;
+  justify-content: center;
+}
+.SupportedNFT > div .currency > * + * {
+  margin-left: 10rem;
+}
+.SupportedNFT > div .currency,
+.SupportedNFT > div .currency > div {
+  display: flex;
+  align-items: center;
+}
+.SupportedNFT > div .currency > div p {
+  margin-left: 10px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.SupportedNFT .get_nft {
+  margin-top: 10rem;
+}
+.SupportedNFT .get_nft h1 {
+  margin-bottom: 4rem;
+}
+.SupportedNFT .get_nft .nft_pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+.SupportedNFT .get_nft .nft_pics img {
+  width: 100%;
+}
+.SupportedNFT + div {
+  padding-bottom: 15rem;
+}
+
+.SupportedNFT .storing_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 2rem;
+  margin-top: 10rem;
+}
+.SupportedNFT .storing_area .left_side > h1 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2335;
+}
+.SupportedNFT .storing_area p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #78738b;
+  margin-top: 1rem;
+}
+.SupportedNFT .storing_area ul {
+  margin-top: 2rem;
+}
+.SupportedNFT .storing_area ul > * + * {
+  margin-top: 1.5rem;
+}
+.SupportedNFT .storing_area ul h1 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.SupportedNFT .storing_area ul p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #78738b;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.SupportedNFT .storing_area > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+  .nftMain > div,
+  .SupportedNFT .storing_area {
+    grid-template-columns: 1fr;
+  }
+  .nftMain > div > *:first-child {
+    order: 2;
+  }
+  .nftMain > div > *:last-child {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .SupportedNFT > div > p {
+    width: 100%;
+  }
+  .SupportedNFT > div .currency > * + * {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .nftMain h1 {
+    font-size: 40px;
+    line-height: unset;
+  }
+  .SupportedNFT > div > h1,
+  .SupportedNFT .get_nft h1,
+  .SupportedNFT .storing_area .left_side > h1 {
+    font-size: 30px;
+    line-height: unset;
+  }
+  .SupportedNFT > div .currency,
+  .SupportedNFT > div .currency > div {
+    flex-direction: column;
+  }
+  .SupportedNFT > div .currency > * + *,
+  .SupportedNFT > div .currency > div p {
+    margin-left: 0px;
+    margin-top: 1rem;
+  }
+  .SupportedNFT .get_nft .nft_pics {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nftMain h1 {
+    font-size: 30px;
+  }
+  .nftMain h2 {
+    font-size: 16px;
+  }
+  .nftMain p,
+  .SupportedNFT > div > p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .SupportedNFT {
+    padding-top: 0px;
+  }
+  .SupportedNFT > div > h1,
+  .SupportedNFT .get_nft h1,
+  .SupportedNFT .storing_area .left_side > h1 {
+    font-size: 20px;
+    line-height: unset;
+  }
+  .SupportedNFT > div .currency > div p,
+  .SupportedNFT .storing_area ul h1 {
+    font-size: 16px;
+  }
+  .SupportedNFT .get_nft h1 {
+    margin-bottom: 2rem;
+  }
+  .SupportedNFT .get_nft .nft_pics {
+    grid-template-columns: 1fr;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .SupportedNFT + div {
+    padding-bottom: 8rem;
+  }
+}
