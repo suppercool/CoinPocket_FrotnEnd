@@ -17,8 +17,8 @@ export const NFT = () => {
       {popup == "agreement" && <Agreement setPopup={setPopup} />}
 
       <Header active={active} setActive={setActive} />
-      <MainNFT />
-      <SupportedNFT />
+      <MainNFT active={active} />
+      <SupportedNFT active={active} />
       <SocialArea active={active} />
       <Footer setPopup={setPopup} active={active} />
     </div>

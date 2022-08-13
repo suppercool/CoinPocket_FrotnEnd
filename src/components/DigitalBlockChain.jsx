@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import download from "../assets/img/download_icon.svg";
 import plus from "../assets/img/plus.svg";
 import btc from "../assets/img/btc.svg";
@@ -14,18 +14,25 @@ import rune from "../assets/img/rune.svg";
 import bnbs from "../assets/img/bnb_simple.svg";
 import dot from "../assets/img/dot.svg";
 import { useNavigate } from "react-router-dom";
-export const DigitalBlockChain = () => {
+import { Languages } from "../helper/Lang/DigitalAssets";
+export const DigitalBlockChain = ({ active }) => {
   let navigate = useNavigate();
+  const [lang, setLang] = useState("eng");
+  useEffect(() => {
+    if (active == "Chinese") {
+      setLang("eng");
+    } else {
+      setLang("chi");
+    }
+  }, [active]);
+
   return (
     <div className="DigitalBlockChainwrapper ">
       <div className="DigitalBlockChain common_width">
-        <h2>global multi-asset</h2>
+        <h2>{Languages[lang]["upheld"]["smallheading"]}</h2>
 
-        <h1>Upheld Resources and Blockchains</h1>
-        <p>
-          Uphold is a global multi-asset digital trading platform. Easy and
-          secure place to trade and manage your digital assets. 10+. Million ...
-        </p>
+        <h1>{Languages[lang]["upheld"]["heading"]}</h1>
+        <p>{Languages[lang]["upheld"]["p"]}</p>
 
         <div className="buttons_wrapper">
           <button
@@ -34,11 +41,11 @@ export const DigitalBlockChain = () => {
             }}
           >
             <img src={download} alt="" />
-            <p>Download Now</p>
+            <p>{Languages[lang]["upheld"]["button_dowload"]}</p>
           </button>
           <button>
             <img src={plus} alt="" />
-            <p>Add Token</p>
+            <p>{Languages[lang]["upheld"]["button_token"]}</p>
           </button>
         </div>
 

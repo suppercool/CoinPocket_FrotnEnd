@@ -18,9 +18,9 @@ export const WebBrowser = () => {
       {popup == "agreement" && <Agreement setPopup={setPopup} />}
 
       <Header active={active} setActive={setActive} />
-      <MainWebBrowser />
-      <BrowserCases />
-      <GridBrowser />
+      <MainWebBrowser active={active} />
+      <BrowserCases active={active} />
+      <GridBrowser active={active} />
       <SocialArea active={active} />
       <Footer setPopup={setPopup} active={active} />
     </div>

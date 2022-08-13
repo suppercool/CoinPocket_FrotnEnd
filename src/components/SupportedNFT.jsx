@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import eth from "../assets/img/eth.svg";
 import bnb from "../assets/img/bnb.svg";
 import opensea from "../assets/img/opensea.png";
 import crypto from "../assets/img/crypto.png";
 import binance from "../assets/img/binance.png";
 import storing_nft from "../assets/img/storing_nft.png";
-
-export const SupportedNFT = () => {
+import { Languages } from "../helper/Lang/NFT";
+export const SupportedNFT = ({ active }) => {
+  const [lang, setLang] = useState("eng");
+  useEffect(() => {
+    if (active == "Chinese") {
+      setLang("eng");
+    } else {
+      setLang("chi");
+    }
+  }, [active]);
   return (
     <div className="SupportedNFT">
       <div className="common_width">
-        <h1>Supported NFTs on these Blockchains</h1>
-        <p>
-          Many NFTs are created and stored on the Ethereum network, although
-          other blockchains (such as Flow and Tezos) also support
-        </p>
+        <h1>{Languages[lang]["blockchain"]}</h1>
+        <p>{Languages[lang]["para"]}</p>
 
         <div className="currency">
           <div className="img_wrapper">
@@ -29,39 +34,21 @@ export const SupportedNFT = () => {
 
         <div className="storing_area">
           <div className="left_side">
-            <h1>Where do I store NFTs?</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam
-              dapibus proin aliquam massa neque in in sodales. Amet integer
-              libero .
-            </p>
+            <h1>{Languages[lang]["storeheading"]}</h1>
+            <p>{Languages[lang]["storePara"]}</p>
             <ul>
               <li>
-                <h1>Mind and Security</h1>
-                <p>
-                  Secure crypto resources and blockchain with certainty just
-                  empowered by CORE. Made for institutional financial backers
-                  and worldwide undertakings, CORE dispenses with the weak link
-                  in any chain
-                </p>
+                <h1>{Languages[lang]["storeList"][0]}</h1>
+                <p>{Languages[lang]["storeList"][1]}</p>
               </li>
 
               <li>
-                <h1>Public Address</h1>
-                <p>
-                  Secure crypto <b>Resources and blockchain</b> with certainty
-                  just empowered by CORE. Made for institutional financial
-                  backers and worldwide
-                </p>
+                <h1>{Languages[lang]["storeList"][2]}</h1>
+                <p>{Languages[lang]["storeList"][3]}</p>
               </li>
               <li>
-                <h1>Mind and Security</h1>
-                <p>
-                  Secure crypto resources and blockchain with certainty just
-                  empowered by CORE. Made for institutional financial{" "}
-                  <b>Backers and Worldwide</b> undertakings, CORE dispenses with
-                  the weak link in any chain
-                </p>
+                <h1>{Languages[lang]["storeList"][4]}</h1>
+                <p>{Languages[lang]["storeList"][5]}</p>
               </li>
             </ul>
           </div>
@@ -69,7 +56,7 @@ export const SupportedNFT = () => {
         </div>
 
         <div className="get_nft">
-          <h1>Where get our NFTs</h1>
+          <h1>{Languages[lang]["get"]}</h1>
           <div className="nft_pics">
             <img src={opensea} alt="" />
             <img src={crypto} alt="" />

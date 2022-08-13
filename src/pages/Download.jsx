@@ -15,7 +15,7 @@ export const Download = () => {
       {popup == "agreement" && <Agreement setPopup={setPopup} />}
 
       <Header active={active} setActive={setActive} />
-      <DownloadContent />
+      <DownloadContent active={active} />
       <SocialArea active={active} />
       <Footer setPopup={setPopup} active={active} />
     </div>

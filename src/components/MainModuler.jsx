@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import moduler_main from "../assets/img/moduler_main.png";
-export const MainModuler = () => {
+import { Languages } from "../helper/Lang/Moduler";
+export const MainModuler = ({ active }) => {
+  const [lang, setLang] = useState("eng");
+  useEffect(() => {
+    if (active == "Chinese") {
+      setLang("eng");
+    } else {
+      setLang("chi");
+    }
+  }, [active]);
   return (
     <div className="nftMain">
       <div className="common_width">
         <div className="presentation">
-          <h2>buy, sell and transfer </h2>
-          <h1>Crypto wallet</h1>
+          <h2>{Languages[lang]["title"]}</h2>
 
-          <p>
-            <b> Crypto wallet</b> is an instant ("turnkey") answer for your
-            clients, related with your image (White Label), for putting away and
-            utilizing different existing digital currencies.
-          </p>
-          <p>
-            Cryptocurrency users to store and retrieve their digital assets. As
-            with conventional currency, you don't need a wallet to spend your
-            cash, but it certainly helps to keep it all in one place..
-          </p>
+          <h1>{Languages[lang]["subtitle"]}</h1>
+
+          <p>{Languages[lang]["para1"]}</p>
+          <p>{Languages[lang]["para2"]}</p>
         </div>
         <img src={moduler_main} alt="" />
       </div>

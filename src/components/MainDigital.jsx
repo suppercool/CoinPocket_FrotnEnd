@@ -1,20 +1,24 @@
-import React from "react";
-import nftImg from "../assets/img/nft.png";
-import { MainFocusedCard } from "./MainFocusedCard";
-import trade from "../assets/img/trade.png";
-import guard from "../assets/img/guard.png";
-
-import block from "../assets/img/block.png";
-export const MainDigital = () => {
+import React, { useState, useEffect } from "react";
+import { Languages } from "../helper/Lang/DigitalAssets";
+export const MainDigital = ({ active }) => {
+  const [lang, setLang] = useState("eng");
+  useEffect(() => {
+    if (active == "Chinese") {
+      setLang("eng");
+    } else {
+      setLang("chi");
+    }
+  }, [active]);
   return (
     <div className="nftMain MainFocused MainDigital">
       <div className="common_width">
         <div className="presentation">
-          <h2>Purpose-built, Smart-contract</h2>
-          <h1>Digital assets under your control.</h1>
+          <h1>{Languages[lang]["title"]}</h1>
+          <h2>{Languages[lang]["subhead"]}</h2>
+
           <p>
-            Start exploring blockchain applications in seconds.
-            <b>One wallet</b> easy to manage multiple chain assets.
+            {Languages[lang]["para"]}
+            <b>{Languages[lang]["boldpara"]}</b> {Languages[lang]["secondpara"]}
           </p>
         </div>
       </div>

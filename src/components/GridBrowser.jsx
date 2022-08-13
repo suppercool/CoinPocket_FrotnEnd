@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import search from "../assets/img/search.png";
 import mbl_cases from "../assets/img/mbl_cases.png";
-export const GridBrowser = () => {
+import { Languages } from "../helper/Lang/WebBrowser";
+export const GridBrowser = ({ active }) => {
+  const [lang, setLang] = useState("eng");
+  useEffect(() => {
+    if (active == "Chinese") {
+      setLang("eng");
+    } else {
+      setLang("chi");
+    }
+  }, [active]);
   return (
     <div className="GridBrowser">
       <div className="common_width">
         <div className="presentation">
-          <h1>Search</h1>
-          <p>
-            <b>Accurate, Secure, Seamlessly</b> track your crypto portfolio
-            across your wallets & exchanges with CoinTracker. Minimize Crypto
-            Taxes. Secure, Easy, Accurate. Auto Sync. All Exchanges & Wallets.
-          </p>
+          <h1>{Languages[lang]["gridarea"][0]}</h1>
+          <p>{Languages[lang]["gridarea"][1]}</p>
         </div>
         <img src={search} alt="" />
         <img src={mbl_cases} alt="" />
         <div className="presentation">
-          <h1>History</h1>
-          <p>
-            <b> Exchange provides</b> open and filled order history, as well as
-            deposit and withdrawal history. You can also generate and download
-            statements for any
-          </p>
+          <h1>{Languages[lang]["gridarea"][2]}</h1>
+          <p>{Languages[lang]["gridarea"][3]}</p>
         </div>
       </div>
     </div>

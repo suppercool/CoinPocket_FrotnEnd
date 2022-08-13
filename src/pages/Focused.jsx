@@ -7,6 +7,7 @@ import { SocialArea } from "../components/SocialArea";
 import { KeyFeatures } from "../components/KeyFeatures";
 import { VideoWrapper } from "../components/VideoWrapper";
 import { MainFocused } from "../components/MainFocused";
+
 import "../assets/styles/focused.css";
 export const Focused = () => {
   const [popup, setPopup] = useState(false);
@@ -17,9 +18,9 @@ export const Focused = () => {
       {popup == "agreement" && <Agreement setPopup={setPopup} />}
 
       <Header active={active} setActive={setActive} />
-      <MainFocused />
+      <MainFocused active={active} />
       <VideoWrapper />
-      <KeyFeatures />
+      <KeyFeatures active={active} />
       <SocialArea active={active} />
       <Footer setPopup={setPopup} active={active} />
     </div>
